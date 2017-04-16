@@ -7,4 +7,9 @@ env:
   global:
     - GIT_NAME="Travis CI"
     - GIT_EMAIL="gabri+travis@gmail.com"
-    secure: nUQ6QsQKgaIRBg4pAlEHG/R4umGxx+wBkgMFRTBQqgYfVt2utmsx53Wq6+iHHBU5pEx3FTof/WlH/SVX0aLJStnWtFOYQwYlD8WBVwiINB+HOP5T498rFr6bcFDRsHhoq6yJ53HacbiX9XIuKVnH8YEoOdQjAY/D9kK2+fymfq/o/oCCHXwXDaX1FR0MLsRlGBhbRUurIi1UTkLwdtxreYJ6MxlNCC0rhuamgrObuhQgMZ32job66zm1LQ45BCcL7NP651KitR61E70elhQxy0b4eU9KuWPyl8O+vKsiEdKf9RaogMx/ZrBli0+J85YlrMyBkhYmt1QiveadudEJNQKTdsGY5KkBUumkcjGDB41D7kAwfX++54WbdRJdTQtVVE/bRuY1VC4fSP44dLJnLh91l8u83icsizfhkv4mOsb8RM1wedzQG3bCJtuW0k8E2Pu/LkXUT1EEj+oR0p/Liul1JBPyg1+oH3ELD9isjE5iM2ALZTnguBOloBfqAlnUTN9zkJ9zgkKLgvWcumopG0RGnZw7UvrlDN88Zg6wZOtQ/dupsSBSRxrV9rj4JBiVpGr7hvu58IGuLKrfH6A1bbR+20d+OaqTwjGENNzsWLnKRp1eoUNGHYeWmPVe7wvqdHl7qb1UEqLLu+2P/526Y/XSZAR/rf9S7Zp3yB3s/z0=
+    - secure: nUQ6QsQKgaIRBg4pAlEHG/R4umGxx+wBkgMFRTBQqgYfVt2utmsx53Wq6+iHHBU5pEx3FTof/WlH/SVX0aLJStnWtFOYQwYlD8WBVwiINB+HOP5T498rFr6bcFDRsHhoq6yJ53HacbiX9XIuKVnH8YEoOdQjAY/D9kK2+fymfq/o/oCCHXwXDaX1FR0MLsRlGBhbRUurIi1UTkLwdtxreYJ6MxlNCC0rhuamgrObuhQgMZ32job66zm1LQ45BCcL7NP651KitR61E70elhQxy0b4eU9KuWPyl8O+vKsiEdKf9RaogMx/ZrBli0+J85YlrMyBkhYmt1QiveadudEJNQKTdsGY5KkBUumkcjGDB41D7kAwfX++54WbdRJdTQtVVE/bRuY1VC4fSP44dLJnLh91l8u83icsizfhkv4mOsb8RM1wedzQG3bCJtuW0k8E2Pu/LkXUT1EEj+oR0p/Liul1JBPyg1+oH3ELD9isjE5iM2ALZTnguBOloBfqAlnUTN9zkJ9zgkKLgvWcumopG0RGnZw7UvrlDN88Zg6wZOtQ/dupsSBSRxrV9rj4JBiVpGr7hvu58IGuLKrfH6A1bbR+20d+OaqTwjGENNzsWLnKRp1eoUNGHYeWmPVe7wvqdHl7qb1UEqLLu+2P/526Y/XSZAR/rf9S7Zp3yB3s/z0=
+
+before_script:
+  - REPO_URL=https://$GH_TOKEN@$GIT_DOMAIN/$TRAVIS_REPO_SLUG.git
+  - git config --global user.name "$GIT_NAME"
+  - git config --global user.email "$GIT_EMAIL"
